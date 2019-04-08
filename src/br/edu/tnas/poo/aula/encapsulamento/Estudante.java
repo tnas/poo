@@ -1,4 +1,4 @@
-package br.edu.tnas.poo.encapsulamento;
+package br.edu.tnas.poo.aula.encapsulamento;
 
 import java.util.Calendar;
 import java.util.Date;
