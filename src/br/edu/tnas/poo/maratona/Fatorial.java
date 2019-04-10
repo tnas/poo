@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Fatorial {
    
     public int calcular(File input) {
+        
         try {
             Scanner scan = new Scanner(input);
             int numeroInteiro = scan.nextInt();
