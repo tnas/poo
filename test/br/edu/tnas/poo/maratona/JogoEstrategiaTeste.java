@@ -11,8 +11,8 @@ import java.util.Scanner;
  */
 public class JogoEstrategiaTeste {
     
-        public static final String INTPUT_DIR = "./maratona-input";
-        public static final String OUTPUT_DIR = "./maratona-output";
+        public static final String INTPUT_DIR = "./maratona-input/JogoEstrategia/";
+        public static final String OUTPUT_DIR = "./maratona-output/JogoEstrategia/";
     
         public static void main(String[] args) {
         
@@ -22,7 +22,7 @@ public class JogoEstrategiaTeste {
         inputFileHelper.getFiles().forEach(f -> {
             File inputFile = new File(f.getAbsolutePath());
             int vencedor = jogo.rodar(inputFile);
-            File outputFile = new File(OUTPUT_DIR.concat("/").concat(inputFile.getName()));
+            File outputFile = new File(OUTPUT_DIR.concat(inputFile.getName()));
             try {
                 try (Scanner scan = new Scanner(outputFile)) {
                     int gabarito = scan.nextInt();
