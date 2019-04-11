@@ -9,9 +9,10 @@ import java.util.Scanner;
  * Problema C - Teleferico
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class Teleferico {
+public class Teleferico implements Desafio<Integer> {
     
-    public int calcularViagens(File input) {
+    @Override
+    public Integer executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);
@@ -33,6 +34,6 @@ public class Teleferico {
             e.printStackTrace();
         }
             
-        return -1;
+        return null;
     }
 }

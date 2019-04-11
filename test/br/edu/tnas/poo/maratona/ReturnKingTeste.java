@@ -25,7 +25,7 @@ public class ReturnKingTeste {
                 .filter(f -> f.getName().endsWith(".in"))
                 .forEach(f -> {
             File inputFile = new File(f.getAbsolutePath());
-            double average = returnKing.run(inputFile);
+            double average = returnKing.executar(inputFile);
             File outputFile = new File(INTPUT_OUTPUT_DIR.concat(inputFile.getName()
                     .replaceFirst("\\.in", "\\.sol")));
             try {

@@ -10,9 +10,10 @@ import java.util.Scanner;
  * Problema B - The return of the King
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class ReturnKing {
+public class ReturnKing implements Desafio<Double> {
     
-    public double run(File input) {
+    @Override
+    public Double executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);
@@ -39,6 +40,6 @@ public class ReturnKing {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return -1;
+        return null;
     }     
 }
