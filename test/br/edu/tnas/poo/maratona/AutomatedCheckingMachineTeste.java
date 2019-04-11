@@ -23,7 +23,6 @@ public class AutomatedCheckingMachineTeste {
         inputFileHelper.getFiles().stream()
                 .filter(f -> f.getName().endsWith(".in"))
                 .forEach(f -> {
-                    System.out.println(f.getName());
             File inputFile = new File(f.getAbsolutePath());
             String answer = machine.run(inputFile);
             File outputFile = new File(INTPUT_OUTPUT_DIR.concat(inputFile.getName()
