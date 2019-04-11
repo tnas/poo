@@ -2,7 +2,6 @@ package br.edu.tnas.poo.maratona;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.BitSet;
 import java.util.Scanner;
 
 /**
