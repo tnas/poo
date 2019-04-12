@@ -10,13 +10,13 @@ import java.util.Scanner;
  * Problema A - Automated Checking Machine
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class AutomatedCheckingMachine {
+public class AutomatedCheckingMachine implements Desafio<String> {
     
     private static final String YES = "Y";
     private static final String NO = "N";
     private static final int CONNECTION_POINTS = 5;
     
-    public String run(File input) {
+    public String executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);

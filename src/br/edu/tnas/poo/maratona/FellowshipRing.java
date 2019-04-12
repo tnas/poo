@@ -9,9 +9,9 @@ import java.util.Scanner;
  * Problema A - The Fellowship of the ring
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class FellowshipRing {
+public class FellowshipRing implements Desafio<Integer> {
     
-    public int run(File input) {
+    public Integer executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);

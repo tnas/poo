@@ -14,11 +14,11 @@ import java.util.Set;
  * Problema C - Competition
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class Competition {
+public class Competition implements Desafio<Integer> {
     
     private enum competitor { ALICE, BOB, NO_ONE };
     
-    public int run(File input) {
+    public Integer executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);

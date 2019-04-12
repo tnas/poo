@@ -3,6 +3,9 @@ package br.edu.tnas.poo.maratona;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -10,10 +13,13 @@ import java.util.Scanner;
  * Problema B - The return of the King
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class ReturnKing implements Desafio<Double> {
+public class ReturnKing implements Desafio<String> {
+    
+    private static final DecimalFormat decimalFormat = 
+            new DecimalFormat("#.00", new DecimalFormatSymbols(Locale.US));
     
     @Override
-    public Double executar(File input) {
+    public String executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);
@@ -34,12 +40,12 @@ public class ReturnKing implements Desafio<Double> {
                 }
             }
             
-            return new BigDecimal(sum / numGrades)
-                    .setScale(2, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+            return decimalFormat.format(new BigDecimal(sum / numGrades)
+                    .setScale(2, BigDecimal.ROUND_HALF_EVEN).doubleValue());
             
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         return null;
-    }     
+    }
 }

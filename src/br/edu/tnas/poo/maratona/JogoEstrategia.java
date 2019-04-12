@@ -10,9 +10,9 @@ import java.util.Scanner;
  * 
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class JogoEstrategia {
+public class JogoEstrategia implements Desafio<Integer> {
 
-    public int rodar(File input) {
+    public Integer executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);

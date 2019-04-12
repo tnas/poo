@@ -25,20 +25,24 @@ public abstract class DesafioTeste<T> {
         
         Desafio<T> desafio = getDesafio();
         FileHelper inputFileHelper = new FileHelper(getInputDirectory());
-        
-        inputFileHelper.getFiles().forEach(f -> {
-            File inputFile = new File(f.getAbsolutePath());
-            T result = desafio.executar(inputFile);
-            File outputFile = new File(getOutputDirectory().concat(inputFile.getName()));
+        inputFileHelper.getFiles().stream().filter(f -> !f.getName().endsWith(".sol"))
+        .forEach(f -> {
+            String inputFileName, outputFileName;    
+            inputFileName = f.getName();
+            outputFileName = inputFileName.endsWith(".in") ? 
+                    inputFileName.replaceFirst("\\.in", "\\.sol") : inputFileName;
+            
+            T result = desafio.executar(new File(f.getAbsolutePath()));
+            File outputFile = new File(getOutputDirectory().concat(outputFileName));
             try {
                 try (Scanner scan = new Scanner(outputFile)) {
                     String expected =  scan.next(); 
                     if (String.valueOf(result).equals(expected)) {
-                        System.out.println(inputFile.getName() + " --- OK");
+                        System.out.println(inputFileName + " --- OK");
                         SUCCESS++;
                     }
                     else {
-                        System.out.println(inputFile.getName() + " --- Falha");
+                        System.out.println(inputFileName + " --- Falha");
                         System.out.printf("Esperado: %s, Encontrado: %s\n", expected, result);
                         FAIL++;
                     }

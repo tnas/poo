@@ -9,9 +9,9 @@ import java.util.Scanner;
  * Problema B - Different Digits
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class DifferentDigits {
+public class DifferentDigits implements Desafio<Integer> {
     
-    public int run(File input) {
+    public Integer executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);

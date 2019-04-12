@@ -9,9 +9,9 @@ import java.util.Scanner;
  * Problema A - Fatorial
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
-public class Fatorial {
+public class Fatorial implements Desafio<Integer> {
    
-    public int calcular(File input) {
+    public Integer executar(File input) {
         
         try {
             Scanner scan = new Scanner(input);
