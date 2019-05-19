@@ -12,15 +12,6 @@ package br.edu.tnas.poo.aula.polimorfismo.parametrico;
 public class TesteListaCompras {
     
     public static void main(String[] args) {
-        ListaComprasString carString = new ListaComprasString();
-        carString.criar(new String[10]);
-        carString.adicionar("itemString");
-        carString.imprimirTamanho();
-        
-        ListaComprasInteger carInteger = new ListaComprasInteger();  
-        carInteger.criar(new Integer[10]);
-        carInteger.adicionar(99);
-        carInteger.imprimirTamanho();
         
         ListaCompras<String> carStringP = new ListaCompras<>();
         carStringP.criar(new String[10]);
@@ -32,6 +23,4 @@ public class TesteListaCompras {
         carIntegerP.adicionar(99);
         carIntegerP.imprimirTamanho();
     }
-    
-    
 }
