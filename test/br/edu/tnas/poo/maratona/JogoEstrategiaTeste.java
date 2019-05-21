@@ -22,6 +22,7 @@ public class JogoEstrategiaTeste extends DesafioTeste<Integer> {
 
     @Override
     public Desafio<Integer> getDesafio() {
-        return new JogoEstrategia();
+        //return new JogoEstrategia();
+        return new br.edu.tnas.poo.maratona.alunos.JogoEstrategia();
     }
 }

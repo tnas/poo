@@ -22,6 +22,7 @@ public class FatorialTeste extends DesafioTeste<Integer> {
 
     @Override
     public Desafio<Integer> getDesafio() {
-        return new Fatorial();
+        //return new Fatorial();
+        return new br.edu.tnas.poo.maratona.alunos.Fatorial();
     }
 }
