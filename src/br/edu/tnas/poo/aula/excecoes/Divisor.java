@@ -18,14 +18,15 @@ public class Divisor {
         System.out.println("Valor de x: " + x);
     }
     
-    public void dividirUmPorZeroControlado() throws DivisaoPorZeroException {
+    public void dividirUmPorZeroControlado() throws ArithmeticException {
         int x = 1/0;
         System.out.println("Valor de x: " + x);
     }
     
     public void dividirPorUMGrafico() {
-        String strDenominador = JOptionPane.showInputDialog(null, "Digite o valor do denominador",
-                JOptionPane.QUESTION_MESSAGE);
+        String strDenominador = JOptionPane.showInputDialog(null, 
+                "Informe um valor numérico para o denominador", 
+                "Denominador da Divisão", JOptionPane.QUESTION_MESSAGE);
         if (strDenominador.equals("0")) {
             throw new DivisaoPorZeroException("Divisão por zero não existe!");
         }

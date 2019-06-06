@@ -10,7 +10,7 @@ package br.edu.tnas.poo.aula.excecoes;
  * @author Thiago Nascimento <nascimenthiago@gmail.com>
  */
 public class DivisaoPorZeroException extends RuntimeException {
-
+  
     public DivisaoPorZeroException(String msg) {
         super(msg);
     }

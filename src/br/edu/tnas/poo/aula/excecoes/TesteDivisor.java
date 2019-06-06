@@ -16,7 +16,13 @@ public class TesteDivisor {
         
         divisor.dividirUmPorZero();
         
-        divisor.dividirUmPorZeroControlado();
+        try {
+            divisor.dividirUmPorZeroControlado();
+        }
+        catch(RuntimeException e) {
+            System.err.println("Causa do erro: " + e.getMessage());
+            System.exit(0);
+        }
         
         divisor.dividirPorUMGrafico();
     }
